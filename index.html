@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lodestar Strategy Group - Campaign Strategy & Operating Plans</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -247,7 +248,7 @@
             <div class="checkout-summary">
                 <p>Total due today</p>
                 <h3 id="checkoutPrice">$6,500</h3>
-                <p>One revision round included • Delivered in 3–5 weeks</p>
+                <p>One revision round • Delivered in 3–5 weeks</p>
             </div>
 
             <form class="checkout-form" id="checkoutForm">
@@ -261,9 +262,11 @@
                     <input type="email" id="checkoutEmail" name="checkoutEmail" required>
                 </div>
 
+                <div id="card-element" class="stripe-element"></div>
+                <div id="card-errors" role="alert"></div>
+
                 <button type="submit" class="btn btn-primary" id="stripeBtn">COMPLETE SECURE PAYMENT</button>
-                <p class="form-note">Payments processed by Stripe • PCI compliant</p>
-                <p class="form-note">Demo mode — replace with your real Stripe link in code</p>
+                <p class="form-note">Payments processed securely by Stripe • PCI compliant</p>
             </form>
         </div>
     </div>
